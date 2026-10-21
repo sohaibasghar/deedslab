@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   experimental: {
     agentFeedback: true,
   },
@@ -14,6 +13,13 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  // The original site served the same pages at these older paths.
+  async redirects() {
+    return [
+      { source: "/pricing", destination: "/services", permanent: true },
+      { source: "/work", destination: "/projects", permanent: true },
+    ];
   },
 };
 

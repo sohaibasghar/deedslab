@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ds/button";
-import { TextLink } from "@/components/ds/text-link";
 import { useCookieConsent } from "@/components/site/cookie-banner";
 import { useTheme } from "@/components/site/theme";
 
@@ -20,16 +18,15 @@ const COLORS = {
 };
 
 /**
- * The booking calendar. Calendly sets its own cookies, so it loads only when the
- * visitor has accepted all cookies or asks for it with "Show available times".
+ * The booking calendar. Calendly sets its own cookies, so the inline calendar
+ * loads only after "Accept all". Until then, the button opens Calendly in a new tab.
  */
 export function CalendlyBooking({ url }: { url: string }) {
   const consent = useCookieConsent();
   const theme = useTheme();
-  const [requested, setRequested] = useState(false);
 
-  if (consent === "all" || requested) {
-    // The iframe only renders in the browser (consent is unknown on the server), so `window` is safe here.
+  if (consent === "all") {
+    // Consent is unknown on the server, so this branch only renders in the browser.
     const params = new URLSearchParams({
       embed_domain: window.location.hostname,
       embed_type: "Inline",
@@ -49,19 +46,14 @@ export function CalendlyBooking({ url }: { url: string }) {
   return (
     <div className="dl-stack">
       <p className="body dl-muted">
-        Pick a time that suits you. The calendar is run by Calendly, which sets
-        its own cookies when it loads.
+        The booking calendar is run by Calendly and opens in a new tab. Choose
+        &ldquo;Accept all&rdquo; in Cookie settings to see it here instead.
       </p>
       <div>
-        <Button variant="secondary" onClick={() => setRequested(true)}>
+        <Button href={url} variant="secondary">
           Show available times
         </Button>
       </div>
-      <p className="body-s">
-        <TextLink href={url} external>
-          Or open the calendar on Calendly
-        </TextLink>
-      </p>
     </div>
   );
 }

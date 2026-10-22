@@ -43,7 +43,7 @@ export default function ServicesPage() {
           ))}
         </div>
       </Section>
-      <AiNativeSection stack={false} />
+      <AiNativeSection stack={false} tone="default" />
       <OfferSection />
       <Section>
         <div className="dl-split dl-split--center">

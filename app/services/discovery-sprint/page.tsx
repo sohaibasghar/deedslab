@@ -19,7 +19,7 @@ import { ClosingCta } from "@/components/sections/closing-cta";
 export const metadata = pageMetadata({
   title: "Discovery Sprint",
   description:
-    "The Discovery Sprint is Deeds Lab's fixed-price first step for founders without a technical team. In 2–3 weeks we turn your written idea into a scoped specification, a clickable prototype and an investor deck, and you own all three.",
+    "The Discovery Sprint is Deeds Lab's first step for founders without a technical team. In 2–3 weeks we turn your written idea into a scoped specification, a clickable prototype and an investor deck, and you own all three.",
   path: "/services/discovery-sprint",
 });
 
@@ -65,7 +65,7 @@ export default function DiscoverySprintPage() {
       <Hero
         label="Discovery Sprint"
         title="Your idea, turned into something you can [[show]]."
-        lead="The Discovery Sprint is Deeds Lab's fixed-price first step for founders without a technical team. In 2–3 weeks we turn your written idea into a scoped specification, a clickable prototype and an investor deck, and you own all three."
+        lead="The Discovery Sprint is Deeds Lab's first step for founders without a technical team. In 2–3 weeks we turn your written idea into a scoped specification, a clickable prototype and an investor deck, and you own all three."
         actions={
           <Button href={CALENDLY_URL} size="lg">
             Book a 20-minute call
@@ -115,8 +115,8 @@ export default function DiscoverySprintPage() {
               <Figure name="abacus" />
               <h3 className="h5">A build estimate.</h3>
               <p className="body dl-muted">
-                A price range, a timeline and what moves them, from real scoping
-                rather than a guess. Use it with us or take it anywhere.
+                A timeline, the effort involved and what changes it, from real
+                scoping rather than a guess. Use it with us or take it anywhere.
               </p>
             </article>
           </div>
@@ -129,7 +129,7 @@ export default function DiscoverySprintPage() {
             steps={[
               {
                 title: "Before we start",
-                body: "One or two conversations to agree what the product is and fix the price. Nothing starts until you've agreed both.",
+                body: "One or two conversations to agree what the product is. We agree the scope and an estimate in writing before work starts.",
               },
               {
                 title: "The specification",
@@ -144,7 +144,7 @@ export default function DiscoverySprintPage() {
               {
                 title: "The deck and the estimate",
                 meta: "Week 3",
-                body: "The story written around the prototype, the deck designed, the build priced. Then a handover call.",
+                body: "The story written around the prototype, the deck designed, the build estimated. Then a handover call.",
               },
             ]}
           />
@@ -214,10 +214,6 @@ export default function DiscoverySprintPage() {
               {
                 q: "What if I don't want the build?",
                 a: "You keep the specification, the prototype and the deck, and you owe nothing more.",
-              },
-              {
-                q: "How do I pay?",
-                a: "Half when we start and half at handover.",
               },
             ]}
           />

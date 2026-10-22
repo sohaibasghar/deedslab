@@ -95,9 +95,9 @@ export default function AiPrototypePage() {
             <div className="dl-stack dl-measure">
               <p className="body-l">
                 Sometimes the answer is "it's fine, ship it", and we'll say so.
-                More often it's a list of fixes, which we can make as a
-                fixed-price project. When the foundations won't hold, the honest
-                answer is a rebuild, priced like any MVP.
+                More often it's a list of fixes, which we can make as a scoped
+                project. When the foundations won't hold, the honest answer is a
+                rebuild, scoped like any MVP.
               </p>
               <p className="body-l">Sohaib does every audit himself.</p>
             </div>

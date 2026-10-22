@@ -51,7 +51,11 @@ export function Hero({
         {body ? <p className="body dl-muted dl-measure">{body}</p> : null}
       </div>
       {actions ? <div className="dl-actions">{actions}</div> : null}
-      {facts ? <Facts items={facts} /> : null}
+      {facts ? (
+        <div>
+          <Facts items={facts} />
+        </div>
+      ) : null}
     </div>
   );
   return (

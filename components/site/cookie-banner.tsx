@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { Anchor } from "@/components/ds/anchor";
 import { Button } from "@/components/ds/button";
 
@@ -46,11 +46,36 @@ export function useCookieConsent() {
   return useSyncExternalStore(subscribe, readConsent, () => "server");
 }
 
+// Whether "Cookie settings" has reopened the banner, shared so other parts of the
+// page (such as the mobile booking bar) can stay out of its way.
+let reopened = false;
+const reopenListeners = new Set<() => void>();
+
+function setReopened(value: boolean) {
+  reopened = value;
+  reopenListeners.forEach((listener) => listener());
+}
+
+function subscribeReopen(listener: () => void) {
+  reopenListeners.add(listener);
+  return () => reopenListeners.delete(listener);
+}
+
+/** True while the cookie banner is on screen. */
+export function useCookieBannerOpen() {
+  const consent = useCookieConsent();
+  const isReopened = useSyncExternalStore(
+    subscribeReopen,
+    () => reopened,
+    () => false,
+  );
+  return consent === null || isReopened;
+}
+
 /** Shown on the first visit, and again whenever Cookie settings is pressed. */
 export function CookieBanner() {
-  // On the server this is "server", so no banner renders; the client decides after hydration.
-  const consent = useCookieConsent();
-  const [reopened, setReopened] = useState(false);
+  // On the server consent is "server", so no banner renders; the client decides after hydration.
+  const open = useCookieBannerOpen();
 
   useEffect(() => {
     const show = () => setReopened(true);
@@ -58,7 +83,7 @@ export function CookieBanner() {
     return () => window.removeEventListener(OPEN_EVENT, show);
   }, []);
 
-  if (consent && !reopened) return null;
+  if (!open) return null;
 
   const choose = (choice: Consent) => {
     writeConsent(choice);

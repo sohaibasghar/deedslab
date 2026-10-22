@@ -30,7 +30,7 @@ export function Person({
         {photo ? (
           <Image
             src={photo}
-            alt=""
+            alt={name}
             width={800}
             height={800}
             sizes="(min-width: 1024px) 240px, 45vw"

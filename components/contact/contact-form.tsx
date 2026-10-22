@@ -40,7 +40,7 @@ export function ContactForm() {
     return (
       <p className="body-l">
         Thanks, {sentBy}. Adil will reply within one working day, from
-        adil@deedslab.co. If a call is easier, pick a time above.
+        contact@deedslab.co. If a call is easier, pick a time above.
       </p>
     );
   }
@@ -59,7 +59,7 @@ export function ContactForm() {
         name="email"
         type="email"
         required
-        hint="We'll reply from adil@deedslab.co."
+        hint="We'll reply from contact@deedslab.co."
         error={errors.email}
         autoComplete="email"
       />
@@ -104,7 +104,8 @@ export function ContactForm() {
         </div>
         <p className="caption dl-muted">
           Adil replies within one working day. We use what you send only to
-          reply. <TextLink href="/privacy">Privacy policy</TextLink>.
+          reply and to scope your project.{" "}
+          <TextLink href="/privacy">Privacy policy</TextLink>.
         </p>
       </div>
     </form>

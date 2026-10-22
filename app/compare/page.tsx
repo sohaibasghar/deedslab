@@ -11,7 +11,7 @@ import { CALENDLY_URL } from "@/components/site/nav";
 export const metadata = pageMetadata({
   title: "Compare your options",
   description:
-    "Without a technical team, there are six ways to get a first product made. Each one is the right choice for someone. Here's when, including when it isn't us.",
+    "Without a technical team, there are seven ways to get a first product made. Each one is the right choice for someone. Here's when, including when it isn't us.",
   path: "/compare",
 });
 
@@ -23,7 +23,7 @@ export default function ComparePage() {
       />
       <Hero
         title="Studio, freelancer, agency or [[AI app builder]]?"
-        lead="Without a technical team, there are six ways to get a first product made. Each one is the right choice for someone. Here's when, including when it isn't us."
+        lead="Without a technical team, there are seven ways to get a first product made. Each one is the right choice for someone. Here's when, including when it isn't us."
         aside={<Figure name="fork" />}
       />
       <Section tone="sunken">
@@ -90,7 +90,7 @@ export default function ComparePage() {
               <h3 className="h5">A freelancer</h3>
               <p className="body dl-muted">
                 Right when you can write the specification, judge the work and
-                manage the person. A strong freelancer costs less than any
+                manage the person. A freelancer is usually cheaper than a
                 studio. The risk is that scoping, design and every decision land
                 on you, and if the freelancer leaves halfway, the knowledge
                 leaves too.

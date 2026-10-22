@@ -131,7 +131,6 @@ export default function ConstructionPlatformPage() {
       </Section>
       <Section>
         <div className="dl-stack dl-stack--lg">
-          <p className="h4 dl-muted">"[Quote, with name and role]"</p>
           <p className="h3 dl-pull">
             The prototype didn't just show the product. It's the reason the
             product got funded.

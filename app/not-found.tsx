@@ -29,7 +29,9 @@ export default function NotFound() {
       <Section>
         <p className="body-s dl-muted">
           {"If a link on our own site sent you here, tell us at "}
-          <TextLink href="mailto:adil@deedslab.co">adil@deedslab.co</TextLink>
+          <TextLink href="mailto:contact@deedslab.co">
+            contact@deedslab.co
+          </TextLink>
           {" and we'll fix it."}
         </p>
       </Section>

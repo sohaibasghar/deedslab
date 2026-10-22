@@ -11,7 +11,7 @@ import { ClosingCta } from "@/components/sections/closing-cta";
 export const metadata = pageMetadata({
   title: "How we work",
   description:
-    "Every project runs the same way: a 20-minute call, scoping, a fixed-price Discovery Sprint, then the build if you want it. You talk to the people doing the work at every step, and you see something real every week.",
+    "Every project runs the same way: a 20-minute call, scoping, a Discovery Sprint, then the build if you want it. You talk to the people doing the work at every step, and you see something real every week.",
   path: "/how-we-work",
 });
 
@@ -23,7 +23,7 @@ export default function HowWeWorkPage() {
       />
       <Hero
         title="How we build an [[MVP]], from first call to launch."
-        lead="Every project runs the same way: a 20-minute call, scoping, a fixed-price Discovery Sprint, then the build if you want it. You talk to the people doing the work at every step, and you see something real every week."
+        lead="Every project runs the same way: a 20-minute call, scoping, a Discovery Sprint, then the build if you want it. You talk to the people doing the work at every step, and you see something real every week."
         aside={<Figure name="steps" />}
       />
       <Section>
@@ -39,7 +39,7 @@ export default function HowWeWorkPage() {
               {
                 title: "Scoping",
                 meta: "Weeks 0–1",
-                body: "One or two longer conversations to agree what the product is and what version one leaves out. You get a written scope and a fixed price, and nothing starts until you've agreed both.",
+                body: "One or two longer conversations to agree what the product is and what version one leaves out. We agree the scope and an estimate in writing before work starts.",
               },
               {
                 title: "The sprint",
@@ -49,7 +49,7 @@ export default function HowWeWorkPage() {
               {
                 title: "The build, if you want it",
                 meta: "Weeks 4–16",
-                body: "Milestones with fixed prices, a working build every week on a link you can click, and a weekly call with Sohaib.",
+                body: "Milestones, a working build every week on a link you can click, and a weekly call with Sohaib.",
               },
             ]}
           />

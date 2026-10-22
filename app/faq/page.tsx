@@ -42,11 +42,7 @@ const FAQ_GROUPS = [
     items: [
       {
         q: "Why won't you quote from a written brief?",
-        a: "Because a brief leaves out the decisions that set the price. A short conversation finds them, and the fixed price follows.",
-      },
-      {
-        q: "How do payments work?",
-        a: "The sprint is paid half at the start and half at handover; a build is paid by milestone, as each one is delivered.",
+        a: "Because a brief leaves out the decisions that shape the work. A short conversation finds them, then we agree the scope and an estimate in writing before work starts.",
       },
       {
         q: "Do you take equity instead of cash?",
@@ -67,11 +63,11 @@ const FAQ_GROUPS = [
       },
       {
         q: "What if the build takes longer than planned?",
-        a: "The price is fixed for the agreed scope, so if we underestimated, that's our cost. If you add to the scope, we price the addition in writing before we do it.",
+        a: "We agree the scope and an estimate in writing before work starts, and we tell you early if anything changes it. If you add to the scope, we agree the addition in writing before we do it.",
       },
       {
         q: "What if I want to stop partway through a build?",
-        a: "You can. You pay for the milestones delivered, and everything built so far is already in your repository.",
+        a: "You can. Everything built so far is already in your repository. Once it has been paid for, it is yours.",
       },
     ],
   },

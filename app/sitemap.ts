@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getArticles } from "@/lib/insights";
 import { absoluteUrl } from "@/lib/site";
 
 type Entry = {
@@ -44,9 +45,16 @@ const PAGES: Entry[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return PAGES.map(({ path, priority, changeFrequency }) => ({
+  const pages = PAGES.map(({ path, priority, changeFrequency }) => ({
     url: absoluteUrl(path),
     changeFrequency,
     priority,
   }));
+  const articles = getArticles().map((article) => ({
+    url: absoluteUrl(`/insights/${article.slug}`),
+    lastModified: article.updated,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+  return [...pages, ...articles];
 }

@@ -11,6 +11,7 @@ import { Media } from "@/components/ds/media";
 import { Prototype } from "@/components/prototypes/prototype";
 import { OfferSection } from "@/components/sections/offer-section";
 import { AiNativeSection } from "@/components/sections/ai-native-section";
+import { AiToolsStage } from "@/components/sections/ai-tools";
 import { Steps } from "@/components/ds/steps";
 import { Person } from "@/components/ds/person";
 import { TEAM } from "@/content/team";
@@ -61,7 +62,11 @@ export default function HomePage() {
             value: "Everything, from day one",
           },
         ]}
-        aside={<Figure name="chat" />}
+        aside={
+          <div className="dl-hero__tools">
+            <AiToolsStage />
+          </div>
+        }
       />
       <Section tone="sunken">
         <div className="dl-split dl-split--flip dl-split--center">
@@ -91,58 +96,13 @@ export default function HomePage() {
           </Media>
         </div>
       </Section>
-      <Section>
-        <div className="dl-stack dl-stack--lg">
-          <Intro title="Two kinds of [[founder]] call us." />
-          <div className="dl-cols-2">
-            <article className="dl-card">
-              <h3 className="h4">The one who needs to raise.</h3>
-              <p className="body-s dl-muted">
-                You have an idea, a deadline and slides. Investors want to see
-                something real, and you can&apos;t build something real until
-                you raise. We break that deadlock in three weeks.
-              </p>
-            </article>
-            <article className="dl-card">
-              <h3 className="h4">The one who just raised.</h3>
-              <p className="body-s dl-muted">
-                The money&apos;s in the bank, the board wants progress and
-                there&apos;s no engineering team. Hiring a founding engineer
-                takes months. We ship the first version while you keep looking.
-              </p>
-            </article>
-          </div>
-          <div className="dl-split dl-split--center">
-            <div className="dl-stack dl-measure">
-              <h3 className="h5">We&apos;re probably not for you if:</h3>
-              <ul className="body-s dl-bullets">
-                <li>
-                  You have a CTO or three or more engineers. Build in-house.
-                </li>
-                <li>
-                  You only need a quick landing page or a throwaway prototype.
-                </li>
-                <li>
-                  You want a fixed quote from a written brief, without a
-                  conversation.
-                </li>
-                <li>You want to pay in equity.</li>
-              </ul>
-              <p className="body-l">
-                We&apos;d rather tell you now than three calls in.
-              </p>
-            </div>
-            <Figure name="fork" />
-          </div>
-        </div>
-      </Section>
       <OfferSection />
-      <AiNativeSection />
+      {/* The AI tools are shown in the first section on this page. */}
+      <AiNativeSection stack={false} />
       <Section>
         <div className="dl-stack dl-stack--lg">
           <Intro title="Four steps, [[no mystery]]." />
           <Steps
-            scroll
             steps={[
               {
                 title: "A 20-minute call",
@@ -152,7 +112,7 @@ export default function HomePage() {
               {
                 title: "Scoping",
                 meta: "Weeks 0–1",
-                body: "A proper conversation about what the thing actually is. We fix the price at the end of it, before any work starts.",
+                body: "A proper conversation about what the thing actually is. At the end of it, we agree the scope and an estimate in writing before work starts.",
               },
               {
                 title: "The sprint",
@@ -206,10 +166,10 @@ export default function HomePage() {
                 engineering. Both are on your calls.
               </p>
               <p className="body">
-                That&apos;s why a senior team costs about 40% of a London
-                agency, and why your budget goes into the product. We say it
-                first because you&apos;d find out anyway, and because it&apos;s
-                an advantage, not a risk to manage.
+                Senior designers and engineers in Lahore make a senior team
+                possible without London overheads, so your budget goes into the
+                product. We say it first because you&apos;d find out anyway, and
+                because it&apos;s an advantage, not a risk to manage.
               </p>
               <p className="caption dl-muted">
                 Calls between 9:00 and 17:00 UK time.
@@ -333,8 +293,8 @@ export default function HomePage() {
           href: CALENDLY_URL,
         }}
         secondary={{
-          label: "Or email adil@deedslab.co",
-          href: "mailto:adil@deedslab.co?subject=Deeds%20Lab%20%E2%80%93%2020-minute%20call&body=Hi%20Adil%2C%0A%0AI%27m%20building%20%5Bwhat%5D%20and%20would%20like%20a%2020-minute%20call.%0A%0A%5BYour%20name%2C%20company%5D",
+          label: "Or email contact@deedslab.co",
+          href: "mailto:contact@deedslab.co?subject=Deeds%20Lab%20%E2%80%93%2020-minute%20call&body=Hi%20Adil%2C%0A%0AI%27m%20building%20%5Bwhat%5D%20and%20would%20like%20a%2020-minute%20call.%0A%0A%5BYour%20name%2C%20company%5D",
         }}
       />
     </>

@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
     agentFeedback: true,
   },
   cacheComponents: true,
+  // Articles and legal pages are read from markdown at build time; ship the files too.
+  outputFileTracingIncludes: {
+    "/insights/**": ["./content/insights/*.md"],
+    "/privacy": ["./content/legal/*.md"],
+    "/terms": ["./content/legal/*.md"],
+    "/sitemap.xml": ["./content/insights/*.md"],
+  },
   partialPrefetching: true,
   turbopack: {
     rules: {

@@ -10,7 +10,7 @@ import { ClosingCta } from "@/components/sections/closing-cta";
 import { SocialLinks } from "@/components/site/social-links";
 import { SOCIAL_LINKS } from "@/content/social";
 import { ABOUT_PAGE } from "@/content/about";
-import { companyDetails } from "@/content/legal";
+import { COMPANY } from "@/content/company";
 import { TEAM } from "@/content/team";
 
 export const metadata = pageMetadata({
@@ -91,7 +91,7 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="body-s dl-muted">
-            {companyDetails()}
+            {COMPANY.aboutLine}
             {SOCIAL_LINKS.length ? " · " : null}
             <SocialLinks links={SOCIAL_LINKS} />
           </p>

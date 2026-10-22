@@ -1,7 +1,7 @@
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Hero } from "@/components/ds/hero";
-import { LEGAL_LAST_UPDATED } from "@/content/legal";
+import { LEGAL_LAST_UPDATED } from "@/lib/legal";
 import { Section } from "@/components/ds/section";
 import { TextLink } from "@/components/ds/text-link";
 
@@ -33,7 +33,7 @@ const COOKIE_TERMS = [
     "Changes",
     "if we add a tool that sets cookies, we update this page and ask again before it runs.",
   ],
-  ["Questions", "adil@deedslab.co."],
+  ["Questions", "contact@deedslab.co."],
 ];
 
 const COOKIE_TABLE = [

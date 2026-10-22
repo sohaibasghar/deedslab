@@ -11,8 +11,8 @@ export function ClosingCta() {
         href: CALENDLY_URL,
       }}
       secondary={{
-        label: "Or email adil@deedslab.co",
-        href: "mailto:adil@deedslab.co?subject=Deeds%20Lab%20%E2%80%93%2020-minute%20call&body=Hi%20Adil%2C%0A%0AI%27m%20building%20%5Bwhat%5D%20and%20would%20like%20a%2020-minute%20call.%0A%0A%5BYour%20name%2C%20company%5D",
+        label: "Or email contact@deedslab.co",
+        href: "mailto:contact@deedslab.co?subject=Deeds%20Lab%20%E2%80%93%2020-minute%20call&body=Hi%20Adil%2C%0A%0AI%27m%20building%20%5Bwhat%5D%20and%20would%20like%20a%2020-minute%20call.%0A%0A%5BYour%20name%2C%20company%5D",
       }}
     />
   );

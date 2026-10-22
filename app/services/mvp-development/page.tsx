@@ -18,7 +18,7 @@ import { ClosingCta } from "@/components/sections/closing-cta";
 export const metadata = pageMetadata({
   title: "MVP development",
   description:
-    "Deeds Lab designs, builds and launches the first working version of your product in 10–16 weeks. You pay by milestone, see a working build every week, and own the code from the first day.",
+    "Deeds Lab designs, builds and launches the first working version of your product in 10–16 weeks. You see a working build every week, and own the code from the first day.",
   path: "/services/mvp-development",
 });
 
@@ -37,7 +37,7 @@ export default function MvpDevelopmentPage() {
       <Hero
         label="MVP Development"
         title="[[MVP]] development for founders without a technical team."
-        lead="Deeds Lab designs, builds and launches the first working version of your product in 10–16 weeks. You pay by milestone, see a working build every week, and own the code from the first day."
+        lead="Deeds Lab designs, builds and launches the first working version of your product in 10–16 weeks. You see a working build every week, and own the code from the first day."
         actions={
           <Button href={CALENDLY_URL} size="lg">
             Book a 20-minute call
@@ -47,10 +47,6 @@ export default function MvpDevelopmentPage() {
           {
             label: "Time",
             value: "10–16 weeks",
-          },
-          {
-            label: "Payment",
-            value: "by milestone",
           },
           {
             label: "You own",
@@ -119,7 +115,7 @@ export default function MvpDevelopmentPage() {
               {
                 title: "Plan",
                 meta: "Week 1",
-                body: "We turn the specification into milestones, each with a fixed price and a demo date.",
+                body: "We turn the specification into milestones, each with an agreed scope, an estimate and a demo date.",
               },
               {
                 title: "Build",
@@ -157,6 +153,11 @@ export default function MvpDevelopmentPage() {
                 intellectual property to you: the code, the designs and the
                 specification.
               </p>
+              <p className="body">
+                Ownership passes to you under the contract once the work is paid
+                for. Third-party and open-source components stay under their own
+                licences.
+              </p>
             </div>
           </div>
         </div>
@@ -171,8 +172,7 @@ export default function MvpDevelopmentPage() {
                 Not with us, but you need what a sprint produces. If you arrive
                 with a specification and designs that hold up, we quote the
                 build from them. If you don't, the sprint is the quickest way to
-                get them, and half its fee comes off a build that starts within
-                90 days.
+                get them.
               </p>
             </div>
           </div>
@@ -210,8 +210,8 @@ export default function MvpDevelopmentPage() {
               </li>
               <li>
                 You need it live in four weeks. A first version takes 10–16
-                weeks, and a four-week promise is cutting something you'll pay
-                for later.
+                weeks, and anyone who promises four weeks is cutting something
+                you'll pay for later.
               </li>
               <li>
                 The idea hasn't met a customer yet. Test it first with a

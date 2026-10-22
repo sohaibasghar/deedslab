@@ -5,7 +5,7 @@ import { Section } from "@/components/ds/section";
 import { Intro } from "@/components/ds/intro";
 import { CalendlyBooking } from "@/components/contact/calendly-booking";
 import { ContactForm } from "@/components/contact/contact-form";
-import { companyDetails } from "@/content/legal";
+import { COMPANY } from "@/content/company";
 import { CALENDLY_URL } from "@/components/site/nav";
 import { SocialLinks } from "@/components/site/social-links";
 import { SOCIAL_LINKS } from "@/content/social";
@@ -32,8 +32,8 @@ export default function ContactPage() {
             value: "20 minutes, on video",
           },
           {
-            label: "Cost",
-            value: "nothing",
+            label: "Price",
+            value: "Free",
           },
           {
             label: "You leave with",
@@ -60,9 +60,10 @@ export default function ContactPage() {
       </Section>
       <Section>
         <p className="body-s dl-muted">
-          {companyDetails()}
-          {SOCIAL_LINKS.length ? " · " : null}
+          {`${COMPANY.email} · `}
           <SocialLinks links={SOCIAL_LINKS} />
+          {SOCIAL_LINKS.length ? " · " : null}
+          {`${COMPANY.location} · ${COMPANY.contactRegistration}`}
         </p>
       </Section>
     </>

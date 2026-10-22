@@ -35,7 +35,7 @@ export function ProjectCard({ project }: { project: Project }) {
         href={project.href}
         {...external}
         aria-label={`Open ${project.shortName} in a new tab`}
-        style={{ display: "block" }}
+        className="dl-shot"
       >
         <Image
           src={project.image.src}
@@ -49,7 +49,6 @@ export function ProjectCard({ project }: { project: Project }) {
             aspectRatio: "8 / 3",
             objectFit: "cover",
             objectPosition: "top",
-            borderRadius: "10px",
             display: "block",
           }}
         />

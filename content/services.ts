@@ -10,7 +10,6 @@ export type Service = {
   cta: LinkAction;
   tag?: string;
   summary: string;
-  price?: string;
   duration: string;
   durationLabel?: string;
   includes: string[];
@@ -23,7 +22,6 @@ export const DISCOVERY_SPRINT: Service = {
   cta: { label: "Read more", href: "/services/discovery-sprint" },
   tag: "Start here",
   summary: "Your idea, turned into something concrete",
-  price: "£4,000–£8,000",
   duration: "2–3 weeks",
   includes: [
     "A scoped specification any engineering team can build from",
@@ -31,7 +29,7 @@ export const DISCOVERY_SPRINT: Service = {
     "An investor deck built around the product",
     "A build estimate based on real scoping",
   ],
-  note: "You own all of it. Half the fee comes off a build started within 90 days.",
+  note: "All of it is yours once it has been paid for.",
 };
 
 export const MVP_DEVELOPMENT: Service = {
@@ -39,11 +37,10 @@ export const MVP_DEVELOPMENT: Service = {
   name: "MVP Development",
   cta: { label: "Read more", href: "/services/mvp-development" },
   summary: "The working product, designed, built and deployed",
-  price: "From £25,000",
   duration: "10–16 weeks",
   includes: [
     "Design, frontend, backend, integrations and admin",
-    "Milestone payments and weekly working builds",
+    "Milestones with a working build every week",
     "Code in your own repository from day one",
     "Full IP assignment in the contract",
   ],
@@ -62,7 +59,6 @@ export const RESOURCE_AUGMENTATION: Service = {
     "Start with one person and add more as you need them",
     "AI-driven development practices come with every engineer",
   ],
-  note: "Rates depend on the role and seniority. You'll get them on the call.",
 };
 
 /** Not on the Services grid; it has its own page and is described there. */
@@ -105,9 +101,7 @@ export const SERVICES_PAGE = {
       },
       {
         label: "You've raised, but the idea still lives in documents",
-        values: [
-          "Discovery Sprint, then the build. Half the sprint fee comes off it.",
-        ],
+        values: ["Discovery Sprint, then the build."],
       },
       {
         label: "You have a team and need more hands on it",

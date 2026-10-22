@@ -9,7 +9,6 @@ export type LinkAction = { label: ReactNode; href: string };
 
 type OfferProps = {
   name: ReactNode;
-  price?: ReactNode;
   duration: ReactNode;
   /** Label for the duration fact, e.g. "Billing" for an ongoing engagement. */
   durationLabel?: string;

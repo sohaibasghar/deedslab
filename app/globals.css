@@ -3037,9 +3037,10 @@ body {
   margin-bottom: auto;
 }
 
-/* Project and offer cards are linked to directly; keep them clear of the sticky header. */
+/* Project and offer cards and FAQ answers are linked to directly; keep them clear of the sticky header. */
 .dl-card[id],
-.dl-offer[id] {
+.dl-offer[id],
+.dl-faq__item[id] {
   scroll-margin-top: calc(var(--header-height) + var(--space-6));
 }
 
@@ -3087,39 +3088,266 @@ body {
   margin: 0;
 }
 
-/* Legal pages: a contents list, then sections that can be linked to. */
-.dl-legal__toc {
-  padding: var(--space-5) var(--space-6);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
-.dl-legal__toc .label {
-  margin: 0 0 var(--space-3);
-}
-.dl-legal__toc ol {
-  display: grid;
-  gap: var(--space-2);
-  margin: 0;
-  padding-left: 1.25em;
-  list-style: decimal;
-  color: var(--text-muted);
-}
-.dl-legal__toc a {
-  color: var(--text);
-}
-.dl-prose > .dl-legal__section {
-  margin-top: var(--space-12);
-  scroll-margin-top: calc(var(--header-height) + var(--space-6));
-}
-.dl-legal__section > * {
+/* Markdown articles and legal pages. */
+.dl-md > * {
   margin-block: 0;
 }
-.dl-legal__section > * + * {
+.dl-md > * + * {
+  margin-top: var(--space-5);
+}
+.dl-md > h2 {
+  margin-top: var(--space-12);
+}
+.dl-md > h3 {
+  margin-top: var(--space-8);
+}
+.dl-md li + li {
+  margin-top: var(--space-2);
+}
+.dl-md strong {
+  font-weight: 500;
+}
+.dl-md__quote {
+  margin-inline: 0;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--accent);
+  color: var(--text-muted);
+}
+.dl-md__quote > p {
+  margin: 0;
+}
+.dl-md__scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.dl-md__scroll table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+.dl-md__scroll th,
+.dl-md__scroll td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.dl-md__scroll tr:last-child td {
+  border-bottom: 0;
+}
+.dl-md__scroll pre {
+  margin: 0;
+  padding: var(--space-4);
+}
+.dl-md :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Phones: stacked full-width hero buttons, 44px tap targets, and room for the
+   sticky booking button. */
+.dl-mobile-cta {
+  display: none;
+}
+@media (width < 768px) {
+  .dl-hero .dl-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dl-hero .dl-actions .dl-btn {
+    width: 100%;
+  }
+  .dl-footer__link,
+  .dl-footer__legal a,
+  .dl-footer__legal button,
+  .dl-footer__contact a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+  }
+  .dl-cookie__actions .dl-btn {
+    flex: 1;
+  }
+  .dl-mobile-cta {
+    position: fixed;
+    z-index: var(--z-header);
+    left: max(16px, env(safe-area-inset-left, 0px));
+    right: max(16px, env(safe-area-inset-right, 0px));
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    display: block;
+  }
+  .dl-mobile-cta__button {
+    width: 100%;
+    box-shadow: var(--shadow-float);
+  }
+  /* Keep the end of the footer clear of the sticky button. */
+  .dl-footer__inner {
+    padding-bottom: calc(var(--space-8) + 80px);
+  }
+}
+
+/* AI tools: cards around the Deeds Lab mark. */
+.dl-tools {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
   margin-top: var(--space-4);
 }
-.dl-prose .dl-legal__section h2 {
-  margin-top: 0;
+@media (width>=1024px) {
+  .dl-tools {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
 }
-.dl-legal__section li + li {
-  margin-top: var(--space-2);
+.dl-tools__copy {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--measure);
+}
+.dl-tools__copy > * {
+  margin: 0;
+}
+.dl-tools__stage {
+  /* A size container, so the cards' entrance can start from its centre (cqw/cqh). */
+  container-type: size;
+  position: relative;
+  aspect-ratio: 16 / 11;
+  display: grid;
+  place-items: center;
+}
+.dl-tools__glow {
+  position: absolute;
+  inset: 18% 22%;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in srgb, var(--accent) 22%, transparent),
+    transparent
+  );
+}
+.dl-tools__mark {
+  position: relative;
+  width: min(46%, 300px);
+  height: auto;
+  color: var(--accent);
+}
+.dl-tools__list {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* The chip is a point at its spot; its card is centred on it. */
+.dl-tools__chip {
+  --ox: var(--cx);
+  --oy: var(--cy);
+  position: absolute;
+  left: calc(var(--ox) * 1%);
+  top: calc(var(--oy) * 1%);
+  width: 0;
+  height: 0;
+}
+/* Centred on its point. */
+.dl-tools__card {
+  transform: translate(-50%, -50%);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5) var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-raised);
+  color: var(--text);
+  box-shadow: var(--shadow-float);
+  white-space: nowrap;
+}
+.dl-tools__card svg {
+  flex: none;
+}
+.dl-tools__name {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media (width<640px) {
+  /* Phones: a taller stage, the cards stepping down above and below the mark. */
+  .dl-tools__stage {
+    aspect-ratio: 4 / 5;
+  }
+  .dl-tools__mark {
+    width: 40%;
+  }
+  .dl-tools__chip {
+    --ox: var(--pcx);
+    --oy: var(--pcy);
+  }
+  .dl-tools__card {
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+  }
+  .dl-tools__card svg {
+    width: 22px;
+    height: 22px;
+  }
+  .dl-tools__name {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Project screenshot frame: clips the image so it can drift inside. */
+.dl-shot {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* AI tools beside the headline on the home page. */
+.dl-hero__tools {
+  display: grid;
+  gap: var(--space-3);
+}
+.dl-hero__tools > .caption {
+  margin: 0;
+  text-align: center;
+}
+.dl-hero__tools .dl-tools__mark {
+  width: min(38%, 260px);
+}
+
+/* AI tools motion, CSS only. Each card starts at the centre of the stage (its
+   offset from there, in container units), small and transparent, and moves out
+   to its place in order; the mark grows in under them. Then each card floats.
+   Only transform properties and opacity change. */
+@keyframes dl-tool-in {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    translate: calc((50 - var(--ox)) * 1cqw) calc((50 - var(--oy)) * 1cqh);
+  }
+}
+@keyframes dl-tool-float {
+  50% {
+    translate: 0 -10px;
+  }
+}
+@keyframes dl-mark-in {
+  from {
+    opacity: 0;
+    scale: 0.82;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dl-tools__chip {
+    animation: dl-tool-in 1s cubic-bezier(0.22, 1, 0.36, 1)
+      calc(0.35s + var(--i) * 0.09s) both;
+  }
+  .dl-tools__card {
+    animation: dl-tool-float 7s ease-in-out calc(var(--i) * -1.15s) infinite;
+  }
+  .dl-tools__mark,
+  .dl-tools__glow {
+    animation: dl-mark-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
 }

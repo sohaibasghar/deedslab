@@ -7,11 +7,11 @@ export const ABOUT_PAGE = {
   lahore: {
     title: "Why a studio in [[Lahore]].",
     paragraphs: [
-      "Because the people are good and the economics are honest. Senior designers and engineers in Lahore cost a fraction of their London equivalents, so a senior team costs about 40% of a London agency, and your money goes into the product rather than an office.",
+      "Because the people are good. Senior designers and engineers in Lahore make a senior team possible without London overheads, and your money goes into the product rather than an office.",
       '"Offshore" usually means layers: an account manager, a project manager, and a team you never meet. Here it means none of them. You talk to the people designing and building your product, in English, at hours that suit you.',
     ],
     facts: [
-      { label: "Prices", value: "In pounds, fixed before we start" },
+      { label: "Estimates", value: "Agreed in writing before work starts" },
       { label: "Ownership", value: "IP assigned to you in the contract" },
       { label: "Calls", value: "9:00–17:00 UK time" },
       { label: "Time difference", value: "+4 hours in summer, +5 in winter" },
@@ -20,7 +20,7 @@ export const ABOUT_PAGE = {
   name: {
     title: 'Why "[[Deeds Lab]]".',
     paragraphs: [
-      "Deeds is inherited: the family, the track record, the reason we're not starting from nothing. Lab is what this business is: a place where things get built and tested.",
+      "Deeds are things done, not things promised: work you can click, not a description of it. Lab is what this business is: a place where things get built and tested.",
       "The mark is two D's facing each other with a gap left open between them. That gap is the space between an idea and a working product, and closing it is the job.",
     ],
   },

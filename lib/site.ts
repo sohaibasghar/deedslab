@@ -6,7 +6,7 @@ export const SITE = {
   tagline: "AI-native product studio for founders",
   description:
     "An AI-native product studio for founders without a technical team. A scoped specification, a clickable prototype and an investor deck in weeks, then the product.",
-  email: "adil@deedslab.co",
+  email: "contact@deedslab.co",
   city: "Lahore",
   country: "PK",
 };

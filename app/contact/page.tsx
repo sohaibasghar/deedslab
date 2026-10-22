@@ -63,7 +63,7 @@ export default function ContactPage() {
           {`${COMPANY.email} · `}
           <SocialLinks links={SOCIAL_LINKS} />
           {SOCIAL_LINKS.length ? " · " : null}
-          {`${COMPANY.location} · ${COMPANY.contactRegistration}`}
+          {COMPANY.contactLine}
         </p>
       </Section>
     </>

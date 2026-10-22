@@ -1,20 +1,19 @@
 import type { Fact } from "@/components/ds/facts";
 
 export const ABOUT_PAGE = {
-  title: "The [[people]] building your product, in Lahore.",
-  lead: "Deeds Lab is a product studio in Lahore, Pakistan, for founders without a technical team. Adil scopes and designs; Sohaib Asghar leads the engineering. Both are on your calls, and nobody stands between you and the work.",
+  title: "The [[people]] building your product.",
+  lead: "Deeds Lab is a product studio for founders without a technical team. Adil scopes and designs; Sohaib Asghar leads the engineering. Both are on your calls, and nobody stands between you and the work.",
   teamTitle: "The [[two people]] you'll talk to.",
-  lahore: {
-    title: "Why a studio in [[Lahore]].",
+  location: {
+    title: "Why a small senior [[team]].",
     paragraphs: [
-      "Because the people are good. Senior designers and engineers in Lahore make a senior team possible without London overheads, and your money goes into the product rather than an office.",
-      '"Offshore" usually means layers: an account manager, a project manager, and a team you never meet. Here it means none of them. You talk to the people designing and building your product, in English, at hours that suit you.',
+      "Because the people are good, and a senior team without London overheads means your money goes into the product rather than an office.",
+      '"Outsourcing" usually means layers: an account manager, a project manager, and a team you never meet. Here it means none of them. You talk to the people designing and building your product, at hours that suit you.',
     ],
     facts: [
       { label: "Estimates", value: "Agreed in writing before work starts" },
       { label: "Ownership", value: "IP assigned to you in the contract" },
       { label: "Calls", value: "9:00–17:00 UK time" },
-      { label: "Time difference", value: "+4 hours in summer, +5 in winter" },
     ] satisfies Fact[],
   },
   name: {

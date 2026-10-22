@@ -7,8 +7,6 @@ export const SITE = {
   description:
     "An AI-native product studio for founders without a technical team. A scoped specification, a clickable prototype and an investor deck in weeks, then the product.",
   email: "contact@deedslab.co",
-  city: "Lahore",
-  country: "PK",
 };
 
 export const absoluteUrl = (path = "/") => new URL(path, SITE.url).toString();

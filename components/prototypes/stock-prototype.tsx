@@ -57,7 +57,7 @@ export function StockPrototype() {
           </span>
         </div>
         <div className="dl-stock__list">
-          <b className="dl-stock__head">Warehouse, Lahore</b>
+          <b className="dl-stock__head">Main warehouse</b>
           {STOCK.map((item, i) => (
             <div key={item.sku} className="dl-stock__row">
               <span className="dl-stock__sku">{item.sku}</span>

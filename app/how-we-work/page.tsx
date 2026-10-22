@@ -82,13 +82,11 @@ export default function HowWeWorkPage() {
         <div className="dl-stack dl-stack--lg">
           <div className="dl-split dl-split--center">
             <div className="dl-stack dl-stack--lg">
-              <Intro title="Lahore and the UK, in [[practice]]." />
+              <Intro title="Working hours, in [[practice]]." />
               <div className="dl-stack dl-measure">
                 <p className="body-l">
-                  Pakistan is 5 hours ahead of the UK in winter and 4 hours in
-                  summer, so our afternoon is your morning. Calls run between
-                  9:00 and 17:00 UK time, and the written update lands before
-                  your working day starts.
+                  Calls run between 9:00 and 17:00 UK time, and the written
+                  update lands before your working day starts.
                 </p>
               </div>
             </div>

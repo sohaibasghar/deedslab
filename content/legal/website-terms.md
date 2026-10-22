@@ -10,7 +10,7 @@ Last updated: 22 October 2026
 
 ## 1. Who we are
 
-This website, deedslab.co, is run by Deedslab, trading as Deeds Lab ("we", "us"). Deedslab is in the process of being registered as a company. We will publish our registered company number and registered office address on this page once registration is complete.
+This website, deedslab.co, is run by Deedslab, trading as Deeds Lab ("we", "us").
 
 Contact: contact@deedslab.co
 

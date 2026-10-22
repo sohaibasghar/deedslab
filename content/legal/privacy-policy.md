@@ -10,7 +10,7 @@ Last updated: 22 October 2026
 
 ## 1. Who we are
 
-Deedslab, trading as Deeds Lab, is the controller of the personal information described here. Deedslab is in the process of being registered as a company. We will add our registered company number and address here once registration is complete.
+Deedslab, trading as Deeds Lab, is the controller of the personal information described here.
 
 Contact for anything in this policy: contact@deedslab.co
 
@@ -53,11 +53,11 @@ We may also share information where the law requires it, or with professional ad
 
 ## 5. Transfers outside the UK
 
-Our team works in Lahore, Pakistan, so when you contact us your information is read and handled there. Some of our providers are based in, or store data in, the United States.
+Our team works outside the UK, so when you contact us your information is read and handled there. Some of our providers are based in, or store data in, the United States.
 
-The UK has not made an adequacy decision for Pakistan. Where UK GDPR applies to a transfer, we protect it with the UK International Data Transfer Agreement or the UK Addendum to the EU standard contractual clauses, supported by a transfer risk assessment, or we rely on a lawful exception where one applies (for example, where the transfer is necessary to take steps you have asked for before a contract). For US providers we rely on the UK-US data bridge where the provider is certified, or on the UK transfer agreements where it is not.
+Where UK GDPR applies to a transfer to a country without a UK adequacy decision, we protect it with the UK International Data Transfer Agreement or the UK Addendum to the EU standard contractual clauses, supported by a transfer risk assessment, or we rely on a lawful exception where one applies (for example, where the transfer is necessary to take steps you have asked for before a contract). For US providers we rely on the UK-US data bridge where the provider is certified, or on the UK transfer agreements where it is not.
 
-Pakistan does not yet have a general data protection law in force. We apply the standards in this policy to everyone's information regardless.
+We apply the standards in this policy to everyone's information, wherever it is handled.
 
 ## 6. How long we keep it
 

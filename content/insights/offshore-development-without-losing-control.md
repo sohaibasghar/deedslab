@@ -6,16 +6,16 @@ author: Adil
 role: CEO & Founder, Deeds Lab
 published: 2026-10-22
 updated: 2026-10-22
-keywords: offshore development, offshore software development UK, outsourcing to Pakistan, managing a remote development team
+keywords: offshore development, offshore software development UK, managing a remote development team
 ---
 
 Offshore development works when you talk to the people writing the code, see working software every week, own the repository from the first day and pay against delivered milestones. Most offshore projects that go wrong break at least one of those four rules.
 
-We run a studio in Lahore that builds for UK founders, so this is the checklist we would want a founder to hold us to.
+We build for UK founders, so this is the checklist we would want a founder to hold us to.
 
 ## Why founders look offshore
 
-Pakistan's IT exports reached $4.6 billion in the 2025-26 fiscal year, up 21% on the year before, according to State Bank of Pakistan figures reported by the Express Tribune. That growth comes from engineers and designers who already work with UK, US and Gulf clients every day. The talent is real. What varies is how the work is run.
+Experienced engineers and designers already work with UK and US clients every day. The talent is real. What varies is how the work is run.
 
 The reason founders get burned is rarely skill. It is distance: layers of managers between you and the people building, progress reported in documents instead of software, and code that lives in someone else's account.
 
@@ -53,7 +53,7 @@ Break the work into milestones, each with a deliverable you can check and a demo
 
 ## Time zones are an advantage if you plan for them
 
-Pakistan does not change its clocks, so it sits 5 hours ahead of the UK in winter and 4 hours ahead in summer. In practice the team's afternoon overlaps your morning. A short written update can land before your working day starts, and the call can sit in the overlap.
+When the team is a few hours ahead of you, its afternoon overlaps your morning. A short written update can land before your working day starts, and the call can sit in the overlap.
 
 Agree three things at the start:
 
@@ -63,7 +63,7 @@ Agree three things at the start:
 
 ## Data protection if you are UK based
 
-If your offshore team will see personal data, such as user records or customer emails, that is a restricted transfer under UK GDPR. Pakistan does not have a UK adequacy decision, so the usual route is the ICO's International Data Transfer Agreement or the UK Addendum to the EU standard clauses, backed by a transfer risk assessment. Keep test data anonymised where you can, and give production access only to the people who need it.
+If your offshore team will see personal data, such as user records or customer emails, that is a restricted transfer under UK GDPR. Where the team's country has no UK adequacy decision, the usual route is the ICO's International Data Transfer Agreement or the UK Addendum to the EU standard clauses, backed by a transfer risk assessment. Keep test data anonymised where you can, and give production access only to the people who need it.
 
 ## A short checklist before you sign
 
@@ -79,6 +79,5 @@ If a team answers all seven clearly, distance stops being a risk and becomes a s
 
 ## Sources
 
-- [IT exports hit record $4.6b, Express Tribune](https://tribune.com.pk/story/2618902/it-exports-hit-record-46b-1)
 - [The UK IDTA and UK Addendum explained, Harper James](https://harperjames.co.uk/article/idta-and-uk-addendum-explained)
 - [Copyright, Designs and Patents Act 1988, section 90](https://www.legislation.gov.uk/ukpga/1988/48/section/90)

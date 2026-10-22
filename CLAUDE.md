@@ -17,7 +17,7 @@ There is no test suite.
 
 ## What this is
 
-Marketing site for Deeds Lab (AI-native product studio), ported from an earlier artifact build to Next.js 16 App Router + React 19. Fully static: no API routes, no database, no env vars. The contact form validates in the browser and shows a confirmation; it sends nothing. Booking goes through an embedded Calendly widget.
+Marketing site for Deeds Lab (AI-native product studio), ported from an earlier artifact build to Next.js 16 App Router + React 19. Pages are static; the only server code is the contact form's Server Action (`app/contact/actions.ts`), which emails enquiries to `contact@deedslab.co` through Resend. Fields and validation are shared with the browser in `lib/enquiry.ts`. It needs `RESEND_API_KEY` and `RESEND_EMAIL_DOMAIN` (set by the Vercel Resend integration; `vercel env pull` for local). Booking goes through an embedded Calendly widget.
 
 Next 16 specifics in use (check `node_modules/next/dist/docs/` before changing them): `cacheComponents: true` and `partialPrefetching` in `next.config.ts`, global `PageProps<"/route">` / `LayoutProps<"/">` types, and `params` as a Promise. With Cache Components, reading `params` happens inside a `<Suspense>` child component (see `app/insights/[slug]/page.tsx`).
 

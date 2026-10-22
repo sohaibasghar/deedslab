@@ -72,15 +72,11 @@ const FAQ_GROUPS = [
     ],
   },
   {
-    title: "Working with a team in Lahore",
+    title: "Working with us",
     items: [
       {
-        q: "Where is your team based?",
-        a: "Lahore, Pakistan. Design and engineering both happen there, and you talk directly to the people building your product, not to an account manager.",
-      },
-      {
-        q: "How do time zones work?",
-        a: "Pakistan is 5 hours ahead of the UK in winter and 4 in summer. Calls run between 9:00 and 17:00 UK time, so our afternoon overlaps your morning.",
+        q: "When can we talk?",
+        a: "Calls run between 9:00 and 17:00 UK time, and a short written update lands before your working day starts.",
       },
       {
         q: "How will we keep in touch?",

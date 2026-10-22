@@ -43,7 +43,5 @@ export const FOOTER_COLUMNS = [
 export const FOOTER_INFO = {
   tagline: "An AI-native product studio for founders without a technical team.",
   contact: "contact@deedslab.co",
-  legal:
-    "© 2026 Deedslab, trading as Deeds Lab. Company registration in progress.",
-  location: "Lahore, Pakistan",
+  legal: "© 2026 Deedslab, trading as Deeds Lab.",
 };

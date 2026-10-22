@@ -112,6 +112,7 @@ type SelectFieldProps = {
   required?: boolean;
   placeholder?: string;
   className?: string;
+  defaultValue?: string;
 };
 
 export function SelectField({
@@ -123,6 +124,7 @@ export function SelectField({
   error,
   required,
   placeholder = "Choose one",
+  defaultValue = "",
   className,
 }: SelectFieldProps) {
   const fieldId = id || `f-${name}`;
@@ -142,7 +144,7 @@ export function SelectField({
         id={fieldId}
         name={name}
         required={required}
-        defaultValue=""
+        defaultValue={defaultValue}
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy(hintId, errorId)}
         className="body dl-field__control dl-field__select"

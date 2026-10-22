@@ -163,19 +163,16 @@ export default function HomePage() {
       <Section>
         <div className="dl-split dl-split--flip">
           <div className="dl-stack dl-stack--lg">
-            <Intro title="Built in [[Lahore]], by the people you talk to." />
+            <Intro title="Built by the [[people]] you talk to." />
             <div className="dl-stack dl-measure">
               <p className="body-l">
-                Our design and engineering team is in Lahore, Pakistan.
-                There&apos;s no account manager between you and the build: Adil
+                There's no account manager between you and the build: Adil
                 scopes your product and runs the sprint, and Sohaib leads the
                 engineering. Both are on your calls.
               </p>
               <p className="body">
-                Senior designers and engineers in Lahore make a senior team
-                possible without London overheads, so your budget goes into the
-                product. We say it first because you&apos;d find out anyway, and
-                because it&apos;s an advantage, not a risk to manage.
+                A senior team without London overheads means your budget goes
+                into the product, not an office.
               </p>
               <p className="caption dl-muted">
                 Calls between 9:00 and 17:00 UK time.
@@ -270,10 +267,6 @@ export default function HomePage() {
               {
                 q: "Who owns the code?",
                 a: "You do, from day one. The code lives in a repository under your company's account, the designs and the specification are yours, and the contract assigns all the intellectual property to you.",
-              },
-              {
-                q: "Where is your team based?",
-                a: "Lahore, Pakistan. Design and engineering both happen there, and you talk directly to the people building your product, not to an account manager.",
               },
               {
                 q: "Can you guarantee the prototype will help me raise?",

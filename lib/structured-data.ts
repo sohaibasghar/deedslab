@@ -23,11 +23,6 @@ export function organizationJsonLd(services: Service[]) {
         ...(SOCIAL_LINKS.length
           ? { sameAs: SOCIAL_LINKS.map((link) => link.href) }
           : {}),
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: SITE.city,
-          addressCountry: SITE.country,
-        },
         founder: TEAM.map((member) => ({
           "@type": "Person",
           name: member.name,

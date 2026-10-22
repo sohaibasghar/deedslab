@@ -42,7 +42,7 @@ const LIVE_KINDS = {
     wait: "Awaiting",
   },
   stock: {
-    title: "Warehouse, Lahore",
+    title: "Main warehouse",
     share: "Share report",
     done: "received",
     toast: "Received · stock updated",

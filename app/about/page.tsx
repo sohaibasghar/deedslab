@@ -20,7 +20,7 @@ export const metadata = pageMetadata({
 });
 
 export default function AboutPage() {
-  const { lahore, name, principles } = ABOUT_PAGE;
+  const { location, name, principles } = ABOUT_PAGE;
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([{ name: "About", path: "/about" }])} />
@@ -50,9 +50,9 @@ export default function AboutPage() {
         <div className="dl-stack dl-stack--lg">
           <div className="dl-split dl-split--center">
             <div className="dl-stack dl-stack--lg">
-              <Intro title={lahore.title} />
+              <Intro title={location.title} />
               <div className="dl-stack dl-measure">
-                {lahore.paragraphs.map((text) => (
+                {location.paragraphs.map((text) => (
                   <p key={text} className="body-l">
                     {text}
                   </p>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             </div>
             <Figure name="zones" />
           </div>
-          <Facts className="dl-facts--grid" items={lahore.facts} />
+          <Facts className="dl-facts--grid" items={location.facts} />
         </div>
       </Section>
       <Section tone="ink">

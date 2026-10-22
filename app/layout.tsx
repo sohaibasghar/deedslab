@@ -3,7 +3,6 @@ import { Albert_Sans, DM_Mono } from "next/font/google";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
 import { CookieBanner } from "@/components/site/cookie-banner";
-import { MobileBookingBar } from "@/components/site/mobile-booking-bar";
 import {
   BOOK_CALL,
   FOOTER_COLUMNS,
@@ -94,7 +93,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             social={SOCIAL_LINKS}
           />
           <CookieBanner />
-          <MobileBookingBar cta={BOOK_CALL} />
         </div>
       </body>
     </html>

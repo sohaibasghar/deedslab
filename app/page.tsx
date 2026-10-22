@@ -1,4 +1,9 @@
 import { Hero } from "@/components/ds/hero";
+import {
+  TypingText,
+  typingDuration,
+  type TypingSegment,
+} from "@/components/ds/typing-text";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ds/button";
@@ -19,6 +24,11 @@ import { CompareTable } from "@/components/ds/compare-table";
 import { Faq } from "@/components/ds/faq";
 import { Cta } from "@/components/ds/cta";
 
+const HERO_TITLE: TypingSegment[] = [
+  { text: "From idea to " },
+  { text: "Production Ready", highlight: true },
+];
+
 export const metadata = pageMetadata({
   title: `${SITE.name}: ${SITE.tagline}`,
   description: SITE.description,
@@ -31,12 +41,8 @@ export default function HomePage() {
     <>
       <Hero
         label="AI-native product studio for founders without a technical team"
-        title={
-          <>
-            {"From idea to "}
-            <span className="dl-hl">Production Ready</span>
-          </>
-        }
+        title={<TypingText segments={HERO_TITLE} />}
+        revealAt={typingDuration(HERO_TITLE) + 150}
         lead="AI-first development: we build with AI agents and build AI into your product. A scoped specification, a clickable prototype and an investor deck, in weeks, not months."
         actions={
           <>

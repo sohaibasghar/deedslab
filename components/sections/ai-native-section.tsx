@@ -23,7 +23,7 @@ export function AiNativeSection({
           We're an AI-native studio. AI runs through how we work and what we
           ship, so products reach users faster and get smarter after launch.
         </p>
-        <div className="dl-cols-3">
+        <div className="dl-cols-3 dl-compact-cards">
           <article className="dl-card">
             <Figure name="overlap" />
             <h3 className="h5">AI in how we build.</h3>

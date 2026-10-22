@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { Facts, type Fact } from "@/components/ds/facts";
 import { highlight } from "@/components/ds/highlight";
 import { cx } from "@/lib/cx";
@@ -15,6 +15,11 @@ type HeroProps = {
   aside?: ReactNode;
   /** Sets the title across the full width, above the split. */
   wideTitle?: boolean;
+  /**
+   * Milliseconds after load at which the lead, buttons and facts rise in, e.g.
+   * once a typed title finishes. Leave out to show them straight away.
+   */
+  revealAt?: number;
   className?: string;
 };
 
@@ -27,6 +32,7 @@ export function Hero({
   facts,
   aside,
   wideTitle,
+  revealAt,
   className,
 }: HeroProps) {
   const long =
@@ -47,19 +53,36 @@ export function Hero({
       <div className="dl-stack">
         {label && !wideTitle ? <p className="label dl-muted">{label}</p> : null}
         {wideTitle ? null : heading}
-        {lead ? <p className="body-l dl-muted dl-measure">{lead}</p> : null}
-        {body ? <p className="body dl-muted dl-measure">{body}</p> : null}
+        {lead ? (
+          <p className="body-l dl-muted dl-measure dl-hero__lead">{lead}</p>
+        ) : null}
+        {body ? (
+          <p className="body dl-muted dl-measure dl-hero__body">{body}</p>
+        ) : null}
       </div>
-      {actions ? <div className="dl-actions">{actions}</div> : null}
+      {actions ? (
+        <div className="dl-actions dl-hero__actions">{actions}</div>
+      ) : null}
       {facts ? (
-        <div>
+        <div className="dl-hero__facts">
           <Facts items={facts} />
         </div>
       ) : null}
     </div>
   );
   return (
-    <section className={cx("dl-hero", className)}>
+    <section
+      className={cx(
+        "dl-hero",
+        revealAt !== undefined && "dl-hero--reveal",
+        className,
+      )}
+      style={
+        revealAt !== undefined
+          ? ({ "--reveal-at": `${revealAt}ms` } as CSSProperties)
+          : undefined
+      }
+    >
       <div className="dl-container">
         {wideTitle ? (
           <div className="dl-stack dl-hero__head">

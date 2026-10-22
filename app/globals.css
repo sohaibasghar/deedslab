@@ -3146,18 +3146,19 @@ body {
   font-size: 0.9em;
 }
 
-/* Phones: stacked full-width hero buttons, 44px tap targets, and room for the
-   sticky booking button. */
-.dl-mobile-cta {
-  display: none;
-}
+/* Phones: hero buttons on one row, and 44px tap targets. */
 @media (width < 768px) {
+  /* Hero buttons share one row at the standard 44px height. */
   .dl-hero .dl-actions {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: var(--space-2);
   }
   .dl-hero .dl-actions .dl-btn {
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: var(--tap-min);
+    padding: 0 var(--space-3);
+    font-size: 0.8125rem;
   }
   .dl-footer__link,
   .dl-footer__legal a,
@@ -3169,22 +3170,6 @@ body {
   }
   .dl-cookie__actions .dl-btn {
     flex: 1;
-  }
-  .dl-mobile-cta {
-    position: fixed;
-    z-index: var(--z-header);
-    left: max(16px, env(safe-area-inset-left, 0px));
-    right: max(16px, env(safe-area-inset-right, 0px));
-    bottom: max(16px, env(safe-area-inset-bottom, 0px));
-    display: block;
-  }
-  .dl-mobile-cta__button {
-    width: 100%;
-    box-shadow: var(--shadow-float);
-  }
-  /* Keep the end of the footer clear of the sticky button. */
-  .dl-footer__inner {
-    padding-bottom: calc(var(--space-8) + 80px);
   }
 }
 
@@ -3274,7 +3259,7 @@ body {
 @media (width<640px) {
   /* Phones: a taller stage, the cards stepping down above and below the mark. */
   .dl-tools__stage {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
   }
   .dl-tools__mark {
     width: 40%;
@@ -3349,5 +3334,146 @@ body {
   .dl-tools__mark,
   .dl-tools__glow {
     animation: dl-mark-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
+}
+
+/* A narrow stage (e.g. beside the headline on a small laptop): smaller cards
+   and mark so eight cards fit without touching. */
+@container (width < 560px) {
+  .dl-tools__card {
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+  }
+  .dl-tools__card svg {
+    width: 20px;
+    height: 20px;
+  }
+  .dl-tools__name {
+    font-size: 0.875rem;
+  }
+}
+/* Only a short, wide stage needs a smaller mark; phones' tall stage has room. */
+@container (width < 560px) and (orientation: landscape) {
+  .dl-hero__tools .dl-tools__mark {
+    width: 30%;
+  }
+}
+
+/* Typing text (CSS only): each character becomes visible at its turn. */
+.dl-type__word {
+  white-space: nowrap;
+}
+/* Hidden only while waiting its turn (fill: backwards); once the moment passes
+   the animation no longer applies and the character is simply visible. */
+@keyframes dl-type-show {
+  from,
+  to {
+    visibility: hidden;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dl-type__char {
+    animation: dl-type-show 1ms steps(1)
+      calc(var(--type-delay) + var(--i) * var(--type-speed)) backwards;
+  }
+}
+
+/* Hero content that waits for a typed title: the lead, then each button, then
+   each fact rise in from --reveal-at. Hidden only while waiting (backwards). */
+@keyframes dl-rise {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dl-hero--reveal
+    :is(
+      .dl-hero__lead,
+      .dl-hero__body,
+      .dl-hero__actions > *,
+      .dl-hero__facts .dl-facts__item
+    ) {
+    animation: dl-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: var(--reveal-at);
+  }
+  .dl-hero--reveal .dl-hero__body {
+    animation-delay: calc(var(--reveal-at) + 100ms);
+  }
+  .dl-hero--reveal .dl-hero__actions > :nth-child(1) {
+    animation-delay: calc(var(--reveal-at) + 200ms);
+  }
+  .dl-hero--reveal .dl-hero__actions > :nth-child(2) {
+    animation-delay: calc(var(--reveal-at) + 300ms);
+  }
+  .dl-hero--reveal .dl-hero__facts .dl-facts__item:nth-child(1) {
+    animation-delay: calc(var(--reveal-at) + 420ms);
+  }
+  .dl-hero--reveal .dl-hero__facts .dl-facts__item:nth-child(2) {
+    animation-delay: calc(var(--reveal-at) + 520ms);
+  }
+}
+
+/* Card grids that stay two-up on phones ("What we offer", "Built AI-first"):
+   tighter padding and type; an odd last card spans the row so it isn't left
+   alone at half width. */
+@media (width<640px) {
+  .dl-compact-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+  .dl-compact-cards > .dl-card {
+    gap: var(--space-2);
+    padding: var(--space-4);
+  }
+  .dl-compact-cards > .dl-card > .dl-figure {
+    margin-bottom: var(--space-1);
+  }
+  .dl-compact-cards .h5 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .dl-compact-cards .body {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+  .dl-compact-cards > :last-child:nth-child(odd) > .dl-figure {
+    width: min(100%, 220px);
+  }
+}
+/* Phones and tablets show these grids two-up, so an odd last card spans the row. */
+@media (width<1024px) {
+  .dl-compact-cards > :last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}
+
+/* Steps on phones: two per row, compact; an odd last step spans the row
+   (phones and tablets both show them two-up). */
+@media (width<640px) {
+  .dl-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-4);
+  }
+  .dl-steps__item {
+    gap: var(--space-2);
+    padding-top: var(--space-4);
+  }
+  .dl-steps__num {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+  }
+  .dl-steps__title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .dl-steps__body {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+}
+@media (width<1024px) {
+  .dl-steps > :last-child:nth-child(odd) {
+    grid-column: span 2;
   }
 }

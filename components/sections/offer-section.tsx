@@ -7,7 +7,7 @@ export function OfferSection() {
     <Section>
       <div className="dl-stack dl-stack--lg">
         <Intro title="What we [[offer]]." />
-        <div className="dl-cols-4">
+        <div className="dl-cols-4 dl-compact-cards">
           <article className="dl-card">
             <Figure name="draft" />
             <h3 className="h5">UI/UX Design</h3>
